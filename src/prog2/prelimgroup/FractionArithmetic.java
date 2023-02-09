@@ -112,26 +112,30 @@ public class FractionArithmetic {
 
     //Patrick
     public void showFirstMenu(){
-        System.out.println("ENTER THE NUMBER OF YOUR DESIRED OPERATION");
-        System.out.println("1. Enter value of Fraction 1");
-        System.out.println("2. Enter value of Fraction 2");
-        System.out.println("3. Exit");
+        System.out.println("**********************************************");
+        System.out.println("* ENTER THE NUMBER OF YOUR DESIRED OPERATION *");
+        System.out.println("*    1. Enter value of Fraction 1            *");
+        System.out.println("*    2. Enter value of Fraction 2            *");
+        System.out.println("*    3. Exit                                 *");
+        System.out.println("*********************************************");
         System.out.println();
     }
 
     //Patrick
     public void showSecondMenu(){
         System.out.println();
-        System.out.println("ENTER THE NUMBER OF YOUR DESIRED OPERATION");
-        System.out.println("1. Show Current Fractions");
-        System.out.println("2. Change Fraction 1");
-        System.out.println("3. Change Fraction 2");
-        System.out.println("4. Add Fractions");
-        System.out.println("5. Subtract Fractions");
-        System.out.println("6. Multiply Fractions");
-        System.out.println("7. Divide Fractions");
-        System.out.println("8. Reduce a Fraction");
-        System.out.println("9. Exit");
+        System.out.println("************************************************");
+        System.out.println("*  ENTER THE NUMBER OF YOUR DESIRED OPERATION  *");
+        System.out.println("*     1. Show Current Fractions                *");
+        System.out.println("*     2. Change Fraction 1                     *");
+        System.out.println("*     3. Change Fraction 2                     *");
+        System.out.println("*     4. Add Fractions                         *");
+        System.out.println("*     5. Subtract Fractions                    *");
+        System.out.println("*     6. Multiply Fractions                    *");
+        System.out.println("*     7. Divide Fractions                      *");
+        System.out.println("*     8. Reduce a Fraction                     *");
+        System.out.println("*     9. Exit                                  *");
+        System.out.println("************************************************");
     }
 
     //Patrick
@@ -142,8 +146,10 @@ public class FractionArithmetic {
         System.out.println();
         System.out.println("* CURRENT FRACTIONS *");
         System.out.println();
+        System.out.println("*********************");
         System.out.println("FRACTION 1: " + fraction1.toString());
         System.out.println("FRACTION 2: " + fraction2.toString());
+        System.out.println("*********************");
         System.out.println();
 
         System.out.println("Press ENTER to continue...");
@@ -185,11 +191,16 @@ public class FractionArithmetic {
         fractionAnswer = fraction1.add(fraction2);
 
         System.out.println();
+        System.out.println("************");
         System.out.println("* ADDITION *");
+        System.out.println("************");
+        System.out.println();
         System.out.println(fraction1.toString() + " + " + fraction2.toString());
         System.out.println();
+        System.out.println("************************************");
         System.out.println("ORIGINAL RESULT: " + fractionAnswer.toString());
         System.out.println("REDUCED RESULT: " + fractionAnswer.reduceFraction().toString() + " or " + fractionAnswer.toDouble());
+        System.out.println("************************************");
         System.out.println();
 
         System.out.println("Press ENTER to continue...");
@@ -204,11 +215,17 @@ public class FractionArithmetic {
         fractionAnswer = fraction1.subtract(fraction2);
 
         System.out.println();
+        System.out.println("***************");
         System.out.println("* SUBTRACTION *");
+        System.out.println("***************");
+        System.out.println();
         System.out.println(fraction1.toString() + " - " + fraction2.toString());
         System.out.println();
+        System.out.println("************************************");
         System.out.println("ORIGINAL RESULT: " + fractionAnswer.toString());
         System.out.println("REDUCED RESULT: " + fractionAnswer.reduceFraction().toString() + " or " + fractionAnswer.toDouble());
+        System.out.println("************************************");
+        System.out.println();
 
         System.out.println();
 
@@ -224,11 +241,17 @@ public class FractionArithmetic {
         fractionAnswer = fraction1.multiplyBy(fraction2);
 
         System.out.println();
+        System.out.println("******************");
         System.out.println("* MULTIPLICATION *");
+        System.out.println("******************");
+        System.out.println();
         System.out.println(fraction1.toString() + " * " + fraction2.toString());
         System.out.println();
+        System.out.println("************************************");
         System.out.println("ORIGINAL RESULT: " + fractionAnswer.toString());
         System.out.println("REDUCED RESULT: " + fractionAnswer.reduceFraction().toString() + " or " + fractionAnswer.toDouble());
+        System.out.println("************************************");
+        System.out.println();
 
         System.out.println();
 
@@ -244,11 +267,19 @@ public class FractionArithmetic {
         fractionAnswer = fraction1.divideBy(fraction2);
 
         System.out.println();
+        System.out.println("************");
         System.out.println("* DIVISION *");
+        System.out.println("************");
+        System.out.println();
         System.out.println("("+fraction1.toString()+")" + " / " + "("+fraction2.toString()+")");
         System.out.println();
+        System.out.println("************************************");
         System.out.println("ORIGINAL RESULT: " + fractionAnswer.toString());
         System.out.println("REDUCED RESULT: " + fractionAnswer.reduceFraction().toString() + " or " + fractionAnswer.toDouble());
+        System.out.println("************************************");
+        System.out.println();
+
+
 
         System.out.println();
 
@@ -262,20 +293,28 @@ public class FractionArithmetic {
 
         Scanner reduceFractionScanner = new Scanner(System.in);
 
-        System.out.println("ENTER THE NUMBER OF YOUR DESIRED OPERATION");
-        System.out.println("1. Reduce Fraction 1");
-        System.out.println("2. Reduce Fraction 2");
-        System.out.println("3. Back");
+        System.out.println("************************************************");
+        System.out.println("*  ENTER THE NUMBER OF YOUR DESIRED OPERATION  *");
+        System.out.println("*     1. Reduce Fraction 1                     *");
+        System.out.println("*     2. Reduce Fraction 2                     *");
+        System.out.println("*     3. Back                                  *");
+        System.out.println("************************************************");
         int userPromptAnswer = Integer.parseInt(reduceFractionScanner.nextLine());
 
         switch (userPromptAnswer){
             case 1:
+                System.out.println();
+                System.out.println("*************************************");
                 System.out.println("ORIGINAL FRACTION 1: " + fraction1.toString());
                 System.out.println("REDUCED FRACTION 1: " + fraction1.reduceFraction().toString());
+                System.out.println("*************************************");
                 break;
             case 2:
+                System.out.println();
+                System.out.println("*************************************");
                 System.out.println("ORIGINAL FRACTION 2: " + fraction2.toString());
                 System.out.println("REDUCED FRACTION 2: " + fraction2.reduceFraction().toString());
+                System.out.println("*************************************");
                 break;
             case 3:
                 break;
