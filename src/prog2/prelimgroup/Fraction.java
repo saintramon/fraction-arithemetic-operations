@@ -5,30 +5,38 @@ public class Fraction {
     private int numerator;
     private int denominator;
 
+    //Sanchie
     public Fraction(){
         this.numerator = 0;
         this.denominator = 0;
     }
 
+    //Sanchie
     public Fraction( int numerator, int denominator){
         this.numerator = numerator;
         this.denominator = denominator;
     }
 
-
+    //Sanchie
     public int getNumerator(){
         return numerator;
     }
+    //Sanchie
     public int getDenominator(){
         return denominator;
     }
+
+
+    //Sanchie
     public void setNumerator(int numerator){
         this.numerator = numerator;
     }
+    //Sanchie
     public void setDenominator(int denominator){
         this.denominator = denominator;
     }
 
+    //Sanchie
     private int computeGCD(int firstNum, int secondNum){
         if (firstNum == 0)
             return secondNum;
@@ -36,14 +44,17 @@ public class Fraction {
         return computeGCD(secondNum % firstNum, firstNum);
     }
 
+    //Sanchie
     public String toString(){
         return this.numerator + " / " + this.denominator;
     }
-
+    //Sanchie
     public double toDouble(){
         return (double) this.numerator / this.denominator;
     }
 
+
+    //Sanchie
     public Fraction add(Fraction fraction){
 
         int numAnswer = 0;
@@ -59,7 +70,7 @@ public class Fraction {
 
         return additionAnswer;
     }
-
+    //Sanchie
     public Fraction subtract(Fraction fraction){
 
         int denAnswer = 0;
@@ -75,7 +86,7 @@ public class Fraction {
 
         return subtractionAnswer;
     }
-
+    //Sanchie
     public Fraction multiplyBy(Fraction fraction){
         int numAnswer = 0;
         int denAnswer = 0;
@@ -87,7 +98,7 @@ public class Fraction {
 
         return multiplicationAnswer;
     }
-
+    //Sanchie
     public Fraction divideBy(Fraction fraction){
         int numAnswer = 0;
         int denAnswer = 0;
@@ -100,6 +111,8 @@ public class Fraction {
         return divisionAnswer;
     }
 
+
+    //Sanchie
     public Fraction reduceFraction(){
         int GCD = 0;
 
@@ -109,6 +122,4 @@ public class Fraction {
 
         return reducedFraction;
     }
-
-
 }

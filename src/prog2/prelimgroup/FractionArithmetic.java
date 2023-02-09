@@ -1,3 +1,14 @@
+/**
+ * GROUP NO.:
+ * GROUP MEMBERS:
+ *
+ * //LEONHARD
+ * ALGORITHM:
+ *
+ *
+ *
+ * */
+
 package prog2.prelimgroup;
 
 import java.lang.*;
@@ -8,9 +19,11 @@ public class FractionArithmetic {
         FractionArithmetic runProgram = new FractionArithmetic();
     }
 
+    //Patrick
     public FractionArithmetic(){
         run();
     }
+    //Patrick
     public void run(){
         Scanner runScanner = new Scanner(System.in);
 
@@ -73,12 +86,20 @@ public class FractionArithmetic {
                 case 7:
                     division(fraction1, fraction2);
                     break;
+                case 8:
+                    reduceFraction(fraction1, fraction2);
+                    break;
+                case 9:
+                    System.out.println("THANK YOU FOR USING OUR PROGRAM");
+                    System.out.println("HAVE A GOOD DAY!");
+                    return;
             }
 
         }while (userAnswer != 9);
 
     }
 
+    //Patrick
     public void greetUser(){
         Scanner greetUserScanner = new Scanner(System.in);
 
@@ -89,6 +110,7 @@ public class FractionArithmetic {
         greetUserScanner.nextLine();
     }
 
+    //Patrick
     public void showFirstMenu(){
         System.out.println("ENTER THE NUMBER OF YOUR DESIRED OPERATION");
         System.out.println("1. Enter value of Fraction 1");
@@ -97,6 +119,7 @@ public class FractionArithmetic {
         System.out.println();
     }
 
+    //Patrick
     public void showSecondMenu(){
         System.out.println();
         System.out.println("ENTER THE NUMBER OF YOUR DESIRED OPERATION");
@@ -111,6 +134,7 @@ public class FractionArithmetic {
         System.out.println("9. Exit");
     }
 
+    //Patrick
     public void showFractions(Fraction fraction1, Fraction fraction2){
 
         Scanner showFractionsScanner = new Scanner(System.in);
@@ -126,6 +150,7 @@ public class FractionArithmetic {
         showFractionsScanner.nextLine();
     }
 
+    //Patrick
     public Fraction enterFraction(String promptMessage){
         Scanner enterFractionScanner = new Scanner(System.in);
 
@@ -151,6 +176,7 @@ public class FractionArithmetic {
         return fraction;
     }
 
+    //Patrick
     public void addition(Fraction fraction1, Fraction fraction2){
         Scanner additionScanner = new Scanner(System.in);
 
@@ -169,6 +195,7 @@ public class FractionArithmetic {
         System.out.println("Press ENTER to continue...");
         additionScanner.nextLine();
     }
+    //Patrick
     public void subtraction(Fraction fraction1, Fraction fraction2){
         Scanner subtractionScanner = new Scanner(System.in);
 
@@ -188,6 +215,7 @@ public class FractionArithmetic {
         System.out.println("Press ENTER to continue...");
         subtractionScanner.nextLine();
     }
+    //Patrick
     public void multiplication(Fraction fraction1, Fraction fraction2){
         Scanner multiplicationScanner = new Scanner(System.in);
 
@@ -207,6 +235,7 @@ public class FractionArithmetic {
         System.out.println("Press ENTER to continue...");
         multiplicationScanner.nextLine();
     }
+    //Patrick
     public void division(Fraction fraction1, Fraction fraction2){
         Scanner divisionScanner = new Scanner(System.in);
 
@@ -228,5 +257,33 @@ public class FractionArithmetic {
     }
 
 
+    //Patrick
+    public static void reduceFraction(Fraction fraction1, Fraction fraction2){
 
+        Scanner reduceFractionScanner = new Scanner(System.in);
+
+        System.out.println("ENTER THE NUMBER OF YOUR DESIRED OPERATION");
+        System.out.println("1. Reduce Fraction 1");
+        System.out.println("2. Reduce Fraction 2");
+        System.out.println("3. Back");
+        int userPromptAnswer = Integer.parseInt(reduceFractionScanner.nextLine());
+
+        switch (userPromptAnswer){
+            case 1:
+                System.out.println("ORIGINAL FRACTION 1: " + fraction1.toString());
+                System.out.println("REDUCED FRACTION 1: " + fraction1.reduceFraction().toString());
+                break;
+            case 2:
+                System.out.println("ORIGINAL FRACTION 2: " + fraction2.toString());
+                System.out.println("REDUCED FRACTION 2: " + fraction2.reduceFraction().toString());
+                break;
+            case 3:
+                break;
+        }
+
+        System.out.println();
+
+        System.out.println("Press ENTER to continue...");
+        reduceFractionScanner.nextLine();
+    }
 }
