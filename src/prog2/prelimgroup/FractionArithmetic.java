@@ -1,9 +1,28 @@
 /**
- * GROUP NO.:
+ * GROUP NUMBER: 8
  * GROUP MEMBERS:
+ *     Guzman, Sanchie Earl Manalo
+ *     Jasmin, Ramon Emmiel
+ *     Lacanilao, Patrick
+ *     Leung, Leonhard
  *
  * //LEONHARD
  * ALGORITHM:
+ *     run method:
+ *     1. Instantiate an object of Fraction named fraction1 and fraction2
+ *     2. Declare and initialize a variable named userAnswer to hold the answer of the user. (set it to 0)
+ *     3. Greet the user by invoking the greetUser method.
+ *     4. Using a do-while loop,
+ *        4.1. Invoke the showFirstMenu method.
+ *        4.2. Read the input of the user and store it in userAnswer.
+ *        4.3. Use switch statements to invoke certain methods following the contents of the first menu.
+ *        4.4. Repeat the loop if the user's answer is not equal to 3 and if the numerator and denominator are 0.
+ *     5. Set the answer of the user to 0.
+ *     6. Using a do-while loop,
+ *        6.1. Invoke the showSecondMenu method.
+ *        6.2. Accept the answer of the user.
+ *        6.3. Use switch statements to invoke certain methods following the contents of the second menu.
+ *        6.4. Repeat the loop if the user's answer is not equal to 9.
  *
  *
  *
@@ -19,11 +38,15 @@ public class FractionArithmetic {
         FractionArithmetic runProgram = new FractionArithmetic();
     }
 
-    //Patrick
+    /**
+     * Default constructor of the FractionArithmetic that immediately calls the run method
+     * */
     public FractionArithmetic(){
         run();
     }
-    //Patrick
+    /**
+     * Method that includes the whole process of the program
+     * */
     public void run(){
         Scanner runScanner = new Scanner(System.in);
 
@@ -99,7 +122,9 @@ public class FractionArithmetic {
 
     }
 
-    //Patrick
+    /**
+     * Method that shows a prompt message that will greet the user before using the program
+     * */
     public void greetUser(){
         Scanner greetUserScanner = new Scanner(System.in);
 
@@ -110,7 +135,9 @@ public class FractionArithmetic {
         greetUserScanner.nextLine();
     }
 
-    //Patrick
+    /**
+     * Method that shows the first menu in which the user will input the desired process
+     * */
     public void showFirstMenu(){
         System.out.println("**********************************************");
         System.out.println("* ENTER THE NUMBER OF YOUR DESIRED OPERATION *");
@@ -121,7 +148,9 @@ public class FractionArithmetic {
         System.out.println();
     }
 
-    //Patrick
+    /**
+     * Method that shows the second menu in which the user will choose their desired operation
+     * */
     public void showSecondMenu(){
         System.out.println();
         System.out.println("************************************************");
@@ -138,7 +167,9 @@ public class FractionArithmetic {
         System.out.println("************************************************");
     }
 
-    //Patrick
+    /**
+     * Method that shows the current fractions given by the user
+     * */
     public void showFractions(Fraction fraction1, Fraction fraction2){
 
         Scanner showFractionsScanner = new Scanner(System.in);
@@ -156,7 +187,9 @@ public class FractionArithmetic {
         showFractionsScanner.nextLine();
     }
 
-    //Patrick
+    /**
+     * Method in which the user will be given a prompt message to input their desired fractions
+     * */
     public Fraction enterFraction(String promptMessage){
         Scanner enterFractionScanner = new Scanner(System.in);
 
@@ -182,7 +215,9 @@ public class FractionArithmetic {
         return fraction;
     }
 
-    //Patrick
+    /**
+     * Method that adds the fractions
+     * */
     public void addition(Fraction fraction1, Fraction fraction2){
         Scanner additionScanner = new Scanner(System.in);
 
@@ -206,7 +241,10 @@ public class FractionArithmetic {
         System.out.println("Press ENTER to continue...");
         additionScanner.nextLine();
     }
-    //Patrick
+
+    /**
+     * Method that subtracts the fractions
+     * */
     public void subtraction(Fraction fraction1, Fraction fraction2){
         Scanner subtractionScanner = new Scanner(System.in);
 
@@ -232,7 +270,9 @@ public class FractionArithmetic {
         System.out.println("Press ENTER to continue...");
         subtractionScanner.nextLine();
     }
-    //Patrick
+    /**
+     * Method that multiplies the fractions
+     * */
     public void multiplication(Fraction fraction1, Fraction fraction2){
         Scanner multiplicationScanner = new Scanner(System.in);
 
@@ -258,7 +298,9 @@ public class FractionArithmetic {
         System.out.println("Press ENTER to continue...");
         multiplicationScanner.nextLine();
     }
-    //Patrick
+    /**
+     * Method that divides the fractions
+     * */
     public void division(Fraction fraction1, Fraction fraction2){
         Scanner divisionScanner = new Scanner(System.in);
 
@@ -287,8 +329,9 @@ public class FractionArithmetic {
         divisionScanner.nextLine();
     }
 
-
-    //Patrick
+    /**
+     * Method that reduces the fractions
+     * */
     public static void reduceFraction(Fraction fraction1, Fraction fraction2){
 
         Scanner reduceFractionScanner = new Scanner(System.in);

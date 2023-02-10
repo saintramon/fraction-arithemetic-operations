@@ -10,39 +10,53 @@ public class Fraction {
 
 
     /**
-     *
+     * Constructs a fraction with 0 as numerator and 0 as denominator
      * */
     public Fraction(){
         this.numerator = 0;
         this.denominator = 0;
     }
 
-    //Sanchie
+    /**
+     * Constructs a fraction with numerator assigned to numerator, and denominator assigned to denominator
+     * */
     public Fraction( int numerator, int denominator){
         this.numerator = numerator;
         this.denominator = denominator;
     }
 
-    //Sanchie
+    /**
+     * Returns the numerator of the fraction
+     * */
     public int getNumerator(){
         return numerator;
     }
-    //Sanchie
+
+    /**
+     * Returns the denominator of the fraction
+     * */
     public int getDenominator(){
         return denominator;
     }
 
 
-    //Sanchie
+    /**
+     * Sets the numerator of the fraction
+     * */
     public void setNumerator(int numerator){
         this.numerator = numerator;
     }
-    //Sanchie
+
+    /**
+     * Sets the denominator of the fraction
+     * */
     public void setDenominator(int denominator){
         this.denominator = denominator;
     }
 
-    //Sanchie
+    /**
+     * Computes the Greatest Common Divisor(GCD)
+     * */
     private int computeGCD(int firstNum, int secondNum){
         if (firstNum == 0)
             return secondNum;
@@ -50,17 +64,24 @@ public class Fraction {
         return computeGCD(secondNum % firstNum, firstNum);
     }
 
-    //Sanchie
+    /**
+     * Returns a string showing the fraction
+     * */
     public String toString(){
         return this.numerator + " / " + this.denominator;
     }
-    //Sanchie
+
+    /**
+     * Returns the double value of the  fraction
+     * */
     public double toDouble(){
         return (double) this.numerator / this.denominator;
     }
 
 
-    //Sanchie
+    /**
+     * Method that adds the two fractions
+     * */
     public Fraction add(Fraction fraction){
 
         int numAnswer = 0;
@@ -76,7 +97,10 @@ public class Fraction {
 
         return additionAnswer;
     }
-    //Sanchie
+
+    /**
+     * Method that subtracts the two fractions
+     * */
     public Fraction subtract(Fraction fraction){
 
         int denAnswer = 0;
@@ -92,7 +116,10 @@ public class Fraction {
 
         return subtractionAnswer;
     }
-    //Sanchie
+
+    /**
+     * Method that multiplies the two fractions
+     * */
     public Fraction multiplyBy(Fraction fraction){
         int numAnswer = 0;
         int denAnswer = 0;
@@ -104,7 +131,10 @@ public class Fraction {
 
         return multiplicationAnswer;
     }
-    //Sanchie
+
+    /**
+     * Method that divides the two fractions
+     * */
     public Fraction divideBy(Fraction fraction){
         int numAnswer = 0;
         int denAnswer = 0;
@@ -118,7 +148,9 @@ public class Fraction {
     }
 
 
-    //Sanchie
+    /**
+     * Reduces a fraction into its lowest form
+     * */
     public Fraction reduceFraction(){
         int GCD = 0;
 
