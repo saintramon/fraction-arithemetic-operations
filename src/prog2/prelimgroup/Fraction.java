@@ -1,3 +1,6 @@
+/**
+ * The reference class for the Fraction class
+ * */
 package prog2.prelimgroup;
 
 public class Fraction {
@@ -5,7 +8,10 @@ public class Fraction {
     private int numerator;
     private int denominator;
 
-    //Sanchie
+
+    /**
+     *
+     * */
     public Fraction(){
         this.numerator = 0;
         this.denominator = 0;
