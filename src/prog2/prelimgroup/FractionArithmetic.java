@@ -1,5 +1,9 @@
 /**
+<<<<<<< HEAD
  * GROUP NUMBER: 8
+=======
+ * GROUP NO.: test
+>>>>>>> b5c0feb47e4722ffd2d4540b1e4c21e216c42c83
  * GROUP MEMBERS:
  *     Guzman, Sanchie Earl Manalo
  *     Jasmin, Ramon Emmiel
