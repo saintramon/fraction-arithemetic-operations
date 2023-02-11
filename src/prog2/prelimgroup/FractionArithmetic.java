@@ -6,9 +6,7 @@
  *     Lacanilao, Patrick
  *     Leung, Leonhard
  *
- * //LEONHARD
  * ALGORITHM:
- *     run method:
  *     1. Instantiate an object of Fraction named fraction1 and fraction2
  *     2. Declare and initialize a variable named userAnswer to hold the answer of the user. (set it to 0)
  *     3. Greet the user by invoking the greetUser method.
@@ -16,13 +14,26 @@
  *        4.1. Invoke the showFirstMenu method.
  *        4.2. Read the input of the user and store it in userAnswer.
  *        4.3. Use switch statements to invoke certain methods following the contents of the first menu.
+ *             - For case 1:
+ *                  Invoke the enterFraction method to obtain the value for fraction1.
+ *             - For case 2:
+ *                  Invoke the enterFraction method to obtain the value for fraction2.
+ *             - For case 3:
+ *                  Display an ending statement
  *        4.4. Repeat the loop if the user's answer is not equal to 3 and if the numerator and denominator are 0.
  *     5. Set the answer of the user to 0.
  *     6. Using a do-while loop,
  *        6.1. Invoke the showSecondMenu method.
- *        6.2. Accept the answer of the user.
- *        6.3. Use switch statements to invoke certain methods following the contents of the second menu.
- *        6.4. Repeat the loop if the user's answer is not equal to 9.
+ *             6.2. Read the input of the user and store it in userAnswer.
+ *             6.3. Use switch statements to invoke certain methods following the contents of the second menu.
+ *                  - For case 1:
+ *                       Invoke the showFractions method with the parameters being fraction1 and fraction2 respectively.
+ *                  - For case 2:
+ *                       Invoke the enterFraction method to obtain the value of fraction1
+ *                  - For case 3:
+ *                       Invoke the enterFraction method to obtain the value of fraction2
+ *                       // to be doneS
+ *             6.4. Repeat the loop if the user's answer is not equal to 9.
  *
  *
  *
@@ -216,7 +227,7 @@ public class FractionArithmetic {
     }
 
     /**
-     * Method that adds the fractions
+     * Method that adds the fractions using the add() method from Fraction class
      * */
     public void addition(Fraction fraction1, Fraction fraction2){
         Scanner additionScanner = new Scanner(System.in);
@@ -243,7 +254,7 @@ public class FractionArithmetic {
     }
 
     /**
-     * Method that subtracts the fractions
+     * Method that subtracts the fractions using the subtract() method from the Fraction class
      * */
     public void subtraction(Fraction fraction1, Fraction fraction2){
         Scanner subtractionScanner = new Scanner(System.in);
@@ -271,7 +282,7 @@ public class FractionArithmetic {
         subtractionScanner.nextLine();
     }
     /**
-     * Method that multiplies the fractions
+     * Method that multiplies the fractions using the multiplyBy() method from the Fraction class
      * */
     public void multiplication(Fraction fraction1, Fraction fraction2){
         Scanner multiplicationScanner = new Scanner(System.in);
@@ -299,7 +310,7 @@ public class FractionArithmetic {
         multiplicationScanner.nextLine();
     }
     /**
-     * Method that divides the fractions
+     * Method that divides the fractions using the divideBy() from the Fraction class
      * */
     public void division(Fraction fraction1, Fraction fraction2){
         Scanner divisionScanner = new Scanner(System.in);
@@ -330,7 +341,7 @@ public class FractionArithmetic {
     }
 
     /**
-     * Method that reduces the fractions
+     * Method that reduces the fractions using the reduceFraction() method from the Fraction class
      * */
     public static void reduceFraction(Fraction fraction1, Fraction fraction2){
 
