@@ -1,9 +1,5 @@
 /**
-<<<<<<< HEAD
  * GROUP NUMBER: 8
-=======
- * GROUP NO.: test
->>>>>>> b5c0feb47e4722ffd2d4540b1e4c21e216c42c83
  * GROUP MEMBERS:
  *     Guzman, Sanchie Earl Manalo
  *     Jasmin, Ramon Emmiel
@@ -11,36 +7,45 @@
  *     Leung, Leonhard
  *
  * ALGORITHM:
- *     1. Instantiate an object of Fraction named fraction1 and fraction2
- *     2. Declare and initialize a variable named userAnswer to hold the answer of the user. (set it to 0)
- *     3. Greet the user by invoking the greetUser method.
- *     4. Using a do-while loop,
- *        4.1. Invoke the showFirstMenu method.
- *        4.2. Read the input of the user and store it in userAnswer.
- *        4.3. Use switch statements to invoke certain methods following the contents of the first menu.
+ *     1. Instantiate an object of the Scanner named runScanner.
+ *     2. Instantiate an object of Fraction named fraction1 and fraction2
+ *     3. Declare and initialize a variable named userAnswer to hold the answer of the user. (set it to 0)
+ *     4. Greet the user by invoking the greetUser method.
+ *     5. Using a do-while loop,
+ *        5.1. Invoke the showFirstMenu method.
+ *        5.2. Read the input of the user and store it in userAnswer.
+ *        5.3. Use switch statements to invoke certain methods following the contents of the first menu.
  *             - For case 1:
  *                  Invoke the enterFraction method to obtain the value for fraction1.
  *             - For case 2:
  *                  Invoke the enterFraction method to obtain the value for fraction2.
  *             - For case 3:
  *                  Display an ending statement
- *        4.4. Repeat the loop if the user's answer is not equal to 3 and if the numerator and denominator are 0.
- *     5. Set the answer of the user to 0.
- *     6. Using a do-while loop,
- *        6.1. Invoke the showSecondMenu method.
- *             6.2. Read the input of the user and store it in userAnswer.
- *             6.3. Use switch statements to invoke certain methods following the contents of the second menu.
- *                  - For case 1:
- *                       Invoke the showFractions method with the parameters being fraction1 and fraction2 respectively.
- *                  - For case 2:
- *                       Invoke the enterFraction method to obtain the value of fraction1
- *                  - For case 3:
- *                       Invoke the enterFraction method to obtain the value of fraction2
- *                       // to be doneS
- *             6.4. Repeat the loop if the user's answer is not equal to 9.
- *
- *
- *
+ *        5.4. Repeat the loop if the user's answer is not equal to 3 and if the numerator and denominator are 0.
+ *     6. Set the answer of the user to 0.
+ *     7. Using a do-while loop,
+ *        7.1. Invoke the showSecondMenu method.
+ *        7.2. Read the input of the user and store it in userAnswer.
+ *        7.3. Use switch statements to invoke certain methods following the contents of the second menu.
+ *             - For case 1:
+ *                  Invoke the showFractions method with the parameters being fraction1 and fraction2.
+ *             - For case 2:
+ *                  Invoke the enterFraction method to obtain the value of fraction1
+ *             - For case 3:
+ *                  Invoke the enterFraction method to obtain the value of fraction2
+ *             - For case 4:
+ *                  Invoke the addition method with the parameters being fraction1 and fraction2.
+ *             - For case 5:
+ *                  Invoke the subtraction method with the parameters being fraction1 and fractions 2.
+ *             - For case 6:
+ *                  Invoke the multiplication method with the parameters being fraction1 and fraction2.
+ *             - For case 7:
+ *                  Invoke the division method with the parameters being fraction1 and fraction2.
+ *             - For case 8:
+ *                  Invoke the reduceFraction method with the parameters being fraction1 and fraction2.
+ *             - For case 9:
+ *                  Send a message thanking the user in using the program.
+ *        7.4. Repeat the loop if the user's answer is not equal to 9.
  * */
 
 package prog2.prelimgroup;

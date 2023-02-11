@@ -1,5 +1,5 @@
 /**
- * The reference class for the Fraction class
+ * FRACTION CLASS
  * */
 package prog2.prelimgroup;
 
@@ -55,7 +55,7 @@ public class Fraction {
     }
 
     /**
-     * Computes the Greatest Common Divisor(GCD)
+     * Computes the Greatest Common Divisor(GCD) using Euclid's algorithm
      * */
     private int computeGCD(int firstNum, int secondNum){
         if (firstNum == 0)
