@@ -1,7 +1,7 @@
 /**
  * FRACTION CLASS
  *
- * This is a reference class for a mathematical FRACTION, in which contains the necessary attributes of a fraction such as the numerator and the denominator.
+ * This is a reference class for a mathematical FRACTION, in which it contains the necessary attributes of a fraction such as the numerator and the denominator.
  * This class also contains the available arithmetic operations that can be performed within 2 Fractions.
  * */
 package prog2.prelimgroup;
