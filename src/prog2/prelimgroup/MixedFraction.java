@@ -18,6 +18,7 @@ public class MixedFraction extends Fraction{
         this.wholeNum = wholeNum;
     }
 
+
     //add
 
     //subtract

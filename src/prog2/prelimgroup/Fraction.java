@@ -60,7 +60,7 @@ public class Fraction {
     /**
      * Computes the Greatest Common Divisor(GCD) using Euclid's algorithm
      * */
-    private int computeGCD(int firstNum, int secondNum){
+    protected int computeGCD(int firstNum, int secondNum){
         if (firstNum == 0)
             return secondNum;
 
@@ -162,5 +162,19 @@ public class Fraction {
         Fraction reducedFraction = new Fraction((this.numerator / GCD), (this.denominator / GCD));
 
         return reducedFraction;
+    }
+
+    public MixedFraction toMixed(){
+        int GCD = computeGCD(this.numerator, this.denominator);
+
+        Fraction reducedFraction = new Fraction((this.numerator / GCD), (this.denominator / GCD));
+
+        int numAnswer = this.numerator / this.denominator;
+        int denAnswer = this.denominator;
+        int wholeNumAnswer = this.numerator % this.denominator;
+
+        MixedFraction mixedFractionAnswer = new MixedFraction(numAnswer, denAnswer, wholeNumAnswer);
+
+        return mixedFractionAnswer;
     }
 }
