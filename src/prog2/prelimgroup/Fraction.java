@@ -90,6 +90,19 @@ public class Fraction {
         int numAnswer = 0;
         int denAnswer = 0;
 
+        if (fraction instanceof MixedFraction){
+            denAnswer = computeGCD(this.denominator, fraction.getDenominator());
+
+            denAnswer = (this.denominator * fraction.getDenominator()) / denAnswer;
+
+            numAnswer = ((this.numerator) * (denAnswer/this.denominator)) +
+                    ((fraction.getDenominator() * ((MixedFraction) fraction).getWholeNum() + fraction.getNumerator()) * (denAnswer/fraction.getDenominator()));
+
+            Fraction additionAnswer = new Fraction(numAnswer, denAnswer);
+
+            return additionAnswer;
+        }
+
         denAnswer = (computeGCD(this.denominator, fraction.getDenominator()));
 
         denAnswer = (this.denominator * fraction.getDenominator()) / denAnswer;
@@ -109,6 +122,19 @@ public class Fraction {
         int denAnswer = 0;
         int numAnswer = 0;
 
+        if (fraction instanceof MixedFraction) {
+            denAnswer = computeGCD(this.denominator, fraction.getDenominator());
+
+            denAnswer = (this.denominator * fraction.getDenominator()) / denAnswer;
+
+            numAnswer = ((this.numerator) * (denAnswer / this.denominator)) -
+                    ((fraction.getDenominator() * ((MixedFraction) fraction).getWholeNum() + fraction.getNumerator()) * (denAnswer / fraction.getDenominator()));
+
+            Fraction subtractionAnswer = new Fraction(numAnswer, denAnswer);
+
+            return subtractionAnswer;
+        }
+
         denAnswer = (computeGCD(this.denominator, fraction.getDenominator()));
 
         denAnswer = (this.denominator * fraction.getDenominator()) / denAnswer;
@@ -127,6 +153,15 @@ public class Fraction {
         int numAnswer = 0;
         int denAnswer = 0;
 
+        if (fraction instanceof MixedFraction){
+            numAnswer = (fraction.getDenominator() * ((MixedFraction) fraction).getWholeNum() + fraction.getNumerator() ) * (this.numerator);
+            denAnswer = fraction.getDenominator() * this.getDenominator();
+
+            Fraction multiplicationAnswer = new Fraction(numAnswer, denAnswer);
+
+            return multiplicationAnswer;
+        }
+
         numAnswer = (this.numerator * fraction.getNumerator());
         denAnswer = (this.denominator * fraction.getDenominator());
 
@@ -142,6 +177,15 @@ public class Fraction {
         int numAnswer = 0;
         int denAnswer = 0;
 
+        if (fraction instanceof MixedFraction){
+            numAnswer = this.numerator * fraction.getDenominator();
+            denAnswer = (this.denominator) * (fraction.getDenominator() * ((MixedFraction) fraction).getWholeNum() + fraction.getNumerator());
+
+            Fraction divisionAnswer = new Fraction(numAnswer, denAnswer);
+
+            return divisionAnswer;
+        }
+
         numAnswer = (this.numerator * fraction.getDenominator());
         denAnswer = (this.denominator * fraction.getNumerator());
 
@@ -155,6 +199,7 @@ public class Fraction {
      * Reduces a fraction into its lowest form
      * */
     public Fraction reduceFraction(){
+
         int GCD = 0;
 
         GCD = computeGCD(this.numerator, this.denominator);
@@ -169,9 +214,9 @@ public class Fraction {
 
         Fraction reducedFraction = new Fraction((this.numerator / GCD), (this.denominator / GCD));
 
-        int numAnswer = this.numerator / this.denominator;
+        int numAnswer = this.numerator % this.denominator;
         int denAnswer = this.denominator;
-        int wholeNumAnswer = this.numerator % this.denominator;
+        int wholeNumAnswer = this.numerator / this.denominator;
 
         MixedFraction mixedFractionAnswer = new MixedFraction(numAnswer, denAnswer, wholeNumAnswer);
 
