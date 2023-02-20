@@ -4,6 +4,7 @@ public class MixedFraction extends Fraction{
 
     private int wholeNum;
 
+    //default constructor
     public MixedFraction(){
         super();
         this.wholeNum = 0;
