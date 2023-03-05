@@ -76,6 +76,8 @@ public class FractionArithmetic {
 
         int userAnswer = 0;
 
+        int fractionChoice = 0;
+
         greetUser();
 
         do {
@@ -86,10 +88,22 @@ public class FractionArithmetic {
 
             switch (userAnswer){
                 case 1:
-                    fraction1 = enterFraction("*FRACTION 1*");
+                    fractionChoice = showFractionChoiceMenu();
+                    if (fractionChoice == 1){
+                        fraction1 = enterProperFraction("*FRACTION 1*");
+                    }else {
+                        fraction1 = new MixedFraction();
+                        fraction1 = enterMixedFraction("*FRACTION 1*");
+                    }
                     break;
                 case 2:
-                    fraction2 = enterFraction("*FRACTION 2*");
+                    fractionChoice = showFractionChoiceMenu();
+                    if (fractionChoice == 1){
+                        fraction2 = enterProperFraction("*FRACTION 2*");
+                    }else {
+                        fraction2 = new MixedFraction();
+                        fraction2 = enterMixedFraction("*FRACTION 2*");
+                    }
                     break;
                 case 3:
                     System.out.println("Thank you for using our program");
@@ -100,6 +114,7 @@ public class FractionArithmetic {
         }while(userAnswer != 3 && (fraction1.getNumerator() == 0) || (fraction2.getNumerator() == 0));
 
         userAnswer = 0;
+        fractionChoice = 0;
 
         do {
 
@@ -112,10 +127,22 @@ public class FractionArithmetic {
                     showFractions(fraction1, fraction2);
                     break;
                 case 2:
-                    fraction1 = enterFraction("*FRACTION 1*");
+                    fractionChoice = showFractionChoiceMenu();
+                    if (fractionChoice == 1){
+                        fraction1 = enterProperFraction("*FRACTION 1*");
+                    }else {
+                        fraction1 = new MixedFraction();
+                        fraction1 = enterMixedFraction("*FRACTION 1*");
+                    }
                     break;
                 case 3:
-                    fraction2 = enterFraction("*FRACTION 2");
+                    fractionChoice = showFractionChoiceMenu();
+                    if (fractionChoice == 1){
+                        fraction2 = enterProperFraction("*FRACTION 2*");
+                    }else {
+                        fraction2 = new MixedFraction();
+                        fraction2 = enterMixedFraction("*FRACTION 2*");
+                    }
                     break;
                 case 4:
                     addition(fraction1, fraction2);
@@ -168,6 +195,22 @@ public class FractionArithmetic {
         System.out.println();
     }
 
+    public int showFractionChoiceMenu(){
+
+        Scanner showFractionChoiceMenuScanner = new Scanner(System.in);
+        int userAnswer;
+
+        System.out.println("**********************************************");
+        System.out.println("* WHAT TYPE OF FRACTION WILL YOU ENTER?      *");
+        System.out.println("*    1. Proper Fraction                      *");
+        System.out.println("*    2. Mixed Fraction                       *");
+        System.out.println("**********************************************");
+        System.out.println();
+
+        userAnswer = Integer.parseInt(showFractionChoiceMenuScanner.nextLine());
+
+        return userAnswer;
+    }
     /**
      * Method that shows the second menu in which the user will choose their desired operation
      * */
@@ -210,7 +253,7 @@ public class FractionArithmetic {
     /**
      * Method in which the user will be given a prompt message to input their desired fractions
      * */
-    public Fraction enterFraction(String promptMessage){
+    public Fraction enterProperFraction(String promptMessage){
         Scanner enterFractionScanner = new Scanner(System.in);
 
         int numerator;
@@ -233,6 +276,35 @@ public class FractionArithmetic {
         enterFractionScanner.nextLine();
 
         return fraction;
+    }
+
+    public Fraction enterMixedFraction(String promptMessage){
+        Scanner enterFractionScanner = new Scanner(System.in);
+
+        int numerator;
+        int denominator;
+        int wholeNum;
+
+        System.out.println(promptMessage);
+        System.out.print("NUMERATOR: " );
+        numerator = Integer.parseInt(enterFractionScanner.nextLine());
+        System.out.print("DENOMINATOR: ");
+        denominator = Integer.parseInt(enterFractionScanner.nextLine());
+        System.out.print("WHOLE NUMBER: ");
+        wholeNum = Integer.parseInt(enterFractionScanner.nextLine());
+
+        Fraction mixedfraction = new MixedFraction(numerator,denominator,wholeNum);
+
+        System.out.println();
+
+        System.out.println("ENTERED FRACTION: " + mixedfraction.toString());
+
+        System.out.println();
+
+        System.out.println("Press ENTER to continue...");
+        enterFractionScanner.nextLine();
+
+        return mixedfraction;
     }
 
     /**
