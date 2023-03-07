@@ -7,7 +7,14 @@ This project is one of the major requirements for our CS 122 Computer Programmin
 We are tasked to design and build a Fraction class in which several arithmetic operations can be performed to the objects of the Fraction class.
 
 ## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+Programmers:
+
+Jasmin, Ramon Emmiel
+Domingo, Diamond Darrel
+Rabang, Gebreyl Isaac
+Baltazar, Rudyard Lans
+Urbiztondo, Karl Jasper
+Bumanglag, AU
 
 ## License
 For Academic Purposes only.
