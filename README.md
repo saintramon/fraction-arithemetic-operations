@@ -13,12 +13,12 @@ We are tasked to design and build a Fraction class in which several arithmetic o
 ## Authors and acknowledgment
 Programmers:
 
-Jasmin, Ramon Emmiel
-Domingo, Diamond Darrel
-Rabang, Gebreyl Isaac
-Baltazar, Rudyard Lans
-Urbiztondo, Karl Jasper
-Bumanglag, AU
+1. Jasmin, Ramon Emmiel
+2. Domingo, Diamond Darrel
+3. Rabang, Gebreyl Isaac
+4. Baltazar, Rudyard Lans
+5. Urbiztondo, Karl Jasper
+6. Bumanglag, AU
 
 ## License
 For Academic Purposes only.
