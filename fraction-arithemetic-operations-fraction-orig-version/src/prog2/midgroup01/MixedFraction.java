@@ -106,4 +106,88 @@ public class MixedFraction extends Fraction {
         return sumAnswer;
     }
 
+    public MixedFraction subtract(MixedFraction mixed){
+        Fraction imp1 = this.toImproper();
+        Fraction imp2 = mixed.toImproper();
+
+        int denAnswer = imp1.getDenominator() * imp2.getDenominator();
+        int numAnswer = (imp1.getNumerator() * (denAnswer/imp1.getDenominator())) - (imp2.getNumerator() * (denAnswer/imp2.getDenominator()));
+
+        Fraction initialAnswer = new Fraction(numAnswer, denAnswer);
+
+        MixedFraction subtractAnswer = initialAnswer.toMixed();
+
+        return subtractAnswer;
+    }
+
+    public MixedFraction subtract(Fraction fraction){
+        Fraction imp1 = this.toImproper();
+        Fraction imp2 = fraction;
+
+        int denAnswer = imp1.getDenominator() * imp2.getDenominator();
+        int numAnswer = (imp1.getNumerator() * (denAnswer/imp1.getDenominator())) - (imp2.getNumerator() * (denAnswer/imp2.getDenominator()));
+
+        Fraction initialAnswer = new Fraction(numAnswer, denAnswer);
+
+        MixedFraction subtractAnswer = initialAnswer.toMixed();
+
+        return subtractAnswer;
+    }
+
+    public MixedFraction multiplyBy(MixedFraction mixed){
+        Fraction imp1 = this.toImproper();
+        Fraction imp2 = mixed.toImproper();
+
+        int numAnswer = imp1.getNumerator()*imp2.getNumerator();
+        int denAnswer = imp1.getDenominator()*imp2.getDenominator();
+
+        Fraction initialAnswer = new Fraction(numAnswer, denAnswer);
+
+        MixedFraction multiplyAnswer = initialAnswer.toMixed();
+
+        return multiplyAnswer;
+    }
+
+    public MixedFraction multiplyBy(Fraction fraction){
+        Fraction imp1 = this.toImproper();
+        Fraction imp2 = fraction;
+
+        int numAnswer = imp1.getNumerator()*imp2.getNumerator();
+        int denAnswer = imp1.getDenominator()*imp2.getDenominator();
+
+        Fraction initialAnswer = new Fraction(numAnswer, denAnswer);
+
+        MixedFraction multiplyAnswer = initialAnswer.toMixed();
+
+        return multiplyAnswer;
+    }
+
+    public MixedFraction divideBy(MixedFraction mixed){
+        Fraction imp1 = this.toImproper();
+        Fraction imp2 = mixed.toImproper();
+
+        int numAnswer = imp1.getNumerator()*imp2.getDenominator();
+        int denAnswer = imp1.getDenominator()*imp2.getNumerator();
+
+        Fraction initialAnswer = new Fraction(numAnswer, denAnswer);
+
+        MixedFraction divideAnswer = initialAnswer.toMixed();
+
+        return divideAnswer;
+    }
+
+    public MixedFraction divideBy(Fraction fraction){
+        Fraction imp1 = this.toImproper();
+        Fraction imp2 = fraction;
+
+        int numAnswer = imp1.getNumerator()*imp2.getDenominator();
+        int denAnswer = imp1.getDenominator()*imp2.getNumerator();
+
+        Fraction initialAnswer = new Fraction(numAnswer, denAnswer);
+
+        MixedFraction divideAnswer = initialAnswer.toMixed();
+
+        return divideAnswer;
+    }
+
 }
