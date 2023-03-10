@@ -60,13 +60,6 @@ public class MixedFraction extends Fraction {
         return (this.wholeNum + " " + super.getNumerator() + "/" + super.getDenominator());
     }
 
-    public MixedFraction reciprocal(){
-        var reciprocal = new MixedFraction();
-        reciprocal.setNumerator(getDenominator());
-        reciprocal.setDenominator(getNumerator());
-        return reciprocal;
-    }
-
     public Fraction toImproper(){
 
         int numAnswer = this.getWholeNum() * this.getDenominator() + this.getNumerator();
