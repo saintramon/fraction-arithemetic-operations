@@ -3,6 +3,10 @@
  */
 
 /**
+ * TEST COMMENT
+ */
+
+/**
  * COMMENTING CONVENTION
  *
  * @author Juan Dela Cruz
