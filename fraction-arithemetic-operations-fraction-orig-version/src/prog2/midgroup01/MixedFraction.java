@@ -100,5 +100,15 @@ public class MixedFraction extends Fraction {
         return sumAnswer;
     }
 
+    public MixedFraction add(MixedFraction mixedFraction){
+        int numAnswer;
+        int denAnswer;
+
+        toImproper();
+        mixedFraction.toImproper();
+
+
+    }
+
 
 }
