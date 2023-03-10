@@ -330,10 +330,10 @@ public class FractionArithmetic {
     /**
      * Method that adds the fractions using the add() method from Fraction class
      * */
-    public void addition(Fraction fraction1, Fraction fraction2){
+    public void addition(MixedFraction fraction1, MixedFraction fraction2){
         Scanner additionScanner = new Scanner(System.in);
 
-        Fraction fractionAnswer = new Fraction();
+        Fraction fractionAnswer = new MixedFraction();
 
         fractionAnswer = fraction1.add(fraction2);
 
@@ -357,10 +357,10 @@ public class FractionArithmetic {
     /**
      * Method that subtracts the fractions using the subtract() method from the Fraction class
      * */
-    public void subtraction(Fraction fraction1, Fraction fraction2){
+    public void subtraction(MixedFraction fraction1, MixedFraction fraction2){
         Scanner subtractionScanner = new Scanner(System.in);
 
-        Fraction fractionAnswer = new Fraction();
+        Fraction fractionAnswer = new MixedFraction();
 
         fractionAnswer = fraction1.subtract(fraction2);
 
@@ -385,10 +385,10 @@ public class FractionArithmetic {
     /**
      * Method that multiplies the fractions using the multiplyBy() method from the Fraction class
      * */
-    public void multiplication(Fraction fraction1, Fraction fraction2){
+    public void multiplication(MixedFraction fraction1, MixedFraction fraction2){
         Scanner multiplicationScanner = new Scanner(System.in);
 
-        Fraction fractionAnswer = new Fraction();
+        Fraction fractionAnswer = new MixedFraction();
 
         fractionAnswer = fraction1.multiplyBy(fraction2);
 
@@ -413,10 +413,10 @@ public class FractionArithmetic {
     /**
      * Method that divides the fractions using the divideBy() from the Fraction class
      * */
-    public void division(Fraction fraction1, Fraction fraction2){
+    public void division(MixedFraction fraction1, MixedFraction fraction2){
         Scanner divisionScanner = new Scanner(System.in);
 
-        Fraction fractionAnswer = new Fraction();
+        Fraction fractionAnswer = new MixedFraction();
 
         fractionAnswer = fraction1.divideBy(fraction2);
 
