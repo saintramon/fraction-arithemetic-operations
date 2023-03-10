@@ -6,6 +6,8 @@
  * */
 package prog2.prelimgroup;
 
+import prog2.midgroup01.MixedFraction;
+
 public class Fraction {
 
     private int numerator;
@@ -162,5 +164,18 @@ public class Fraction {
         Fraction reducedFraction = new Fraction((this.numerator / GCD), (this.denominator / GCD));
 
         return reducedFraction;
+    }
+
+    public MixedFraction toMixed(){
+
+        Fraction reduced = this.reduceFraction();
+
+        int numAnswer = reduced.getNumerator() % reduced.getDenominator();
+        int denAnswer = reduced.getDenominator();
+        int wholeNum = reduced.getNumerator() / reduced.getDenominator();
+
+        MixedFraction mixedAnswer = new MixedFraction(numAnswer, denAnswer, wholeNum);
+
+        return mixedAnswer;
     }
 }
