@@ -56,10 +56,6 @@ public class MixedFraction extends Fraction {
         return (this.wholeNum + 1.0 * this.getNumerator() / this.getDenominator());
     }
 
-    public String toString(){
-        return (this.wholeNum + " " + super.getNumerator() + "/" + super.getDenominator());
-    }
-
     public Fraction toImproper(){
 
         int numAnswer = this.getWholeNum() * this.getDenominator() + this.getNumerator();
@@ -183,4 +179,25 @@ public class MixedFraction extends Fraction {
         return divideAnswer;
     }
 
+    public String toString(){
+        if (this.wholeNum == 0){
+            return (this.getNumerator() + " / " + this.getDenominator());
+        }
+        if (this.getNumerator() == 0 && this.getDenominator() == 1 && this.getWholeNum() != 0){
+            return Integer.toString(this.getWholeNum());
+        }
+
+        return (this.getWholeNum() + " " + this.getNumerator() + " / " + this.getDenominator());
+    }
+
+    public MixedFraction reduceFraction(){
+        int GCD = 0;
+
+        GCD = computeGCD(this.getNumerator(), this.getDenominator());
+
+        MixedFraction reducedFraction = new MixedFraction((this.getNumerator() / GCD), (this.getDenominator() / GCD), this.wholeNum);
+
+
+        return reducedFraction;
+    }
 }
