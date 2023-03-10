@@ -2,6 +2,7 @@
  * This class will be the MixedFraction class which will inherit the Fraction class
  */
 
+
 /**
  * COMMENTING CONVENTION
  *
