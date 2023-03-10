@@ -60,7 +60,7 @@ public class Fraction {
     /**
      * Computes the Greatest Common Divisor(GCD) using Euclid's algorithm
      * */
-    private int computeGCD(int firstNum, int secondNum){
+    public int computeGCD(int firstNum, int secondNum){
         if (firstNum == 0)
             return secondNum;
 

@@ -24,35 +24,80 @@ public class MixedFraction extends Fraction {
 
     public MixedFraction(){
         super();
-        this.wholeNum = 0;
     }
 
     public MixedFraction(int numerator, int denominator, int wholeNum){
-        super(numerator,denominator);
+        setNumerator(numerator);
+        setDenominator(denominator);
         this.wholeNum = wholeNum;
     }
 
-    /**
-     * Since we inherited the setters of the Fraction class, we should then only create the setter for the wholeNum part
-     *
-     * SETTER: Gebreyl
-     */
+    public void setWholeNum(int wholeNum){
+        this.wholeNum = wholeNum;
+    }
 
-    /**
-     * Since we inherited the getters of the Fraction class, we should then only create the getter for the wholeNum part
-     *
-     * GETTER: Lans
-     */
+    public int getWholeNum(){
+        return this.wholeNum;
+    }
 
-    /**
-     * toDouble() method should return the decimal form of the mixed Fraction
-     *
-     * toDouble: Jasper and Diamond
-     */
+    public double toDouble(){
+        return (this.wholeNum + 1.0 * getNumerator() / getDenominator());
+    }
 
-    /**
-     * toString() should return the mixed fraction object as a string
-     *
-     * toString(): AU
-     */
+    public String toString(){
+        if (getWholeNum() == 0){
+            return (getNumerator() + "/" + getDenominator());
+        }
+        if (getDenominator() == 1){
+            return ("" + (getWholeNum() + getNumerator()));
+        }else {
+            return (getWholeNum() + " " + getNumerator() + "/" + getDenominator());
+        }
+    }
+
+    public MixedFraction reciprocal(){
+        var reciprocal = new MixedFraction();
+        reciprocal.setNumerator(getDenominator());
+        reciprocal.setDenominator(getNumerator());
+        return reciprocal;
+    }
+
+    public void toImproper(){
+        setNumerator(getWholeNum()*getDenominator()+getNumerator());
+        setDenominator(getDenominator());
+        setWholeNum(0);
+    }
+
+    public void toMixed(){
+        setWholeNum(getNumerator() / getDenominator());
+        setNumerator(getNumerator() % getDenominator());
+    }
+
+    public MixedFraction add(Fraction fraction){
+
+        int numAnswer;
+        int denAnswer;
+
+        toImproper();
+
+        if (getDenominator() == fraction.getDenominator()){
+            denAnswer = getDenominator();
+            numAnswer = getNumerator() + fraction.getDenominator();
+        }else {
+            denAnswer = computeGCD(this.getDenominator(), fraction.getDenominator());
+            numAnswer = denAnswer / getDenominator() * getNumerator() + denAnswer / fraction.getDenominator() * fraction.getNumerator();
+        }
+
+        toMixed();
+
+        var sumAnswer = new MixedFraction();
+        sumAnswer.setNumerator(numAnswer);
+        sumAnswer.setDenominator(denAnswer);
+        sumAnswer.reduceFraction();
+        sumAnswer.toMixed();
+
+        return sumAnswer;
+    }
+
+
 }
